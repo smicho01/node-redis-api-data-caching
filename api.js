@@ -21,7 +21,7 @@ const getWeather = async (city) => {
     
     // ... No cache (cache miss) .... then get response from API
     let apiResponse = await axios.get(cityEndpoint(city))
-    redis.set(`weather:${city}`, JSON.stringify(apiResponse.data))
+    redis.set(`weather:${city}`, JSON.stringify(apiResponse.data), 'EX', 3600 ) // 1h cache
     return {...apiResponse.data, 'source' : 'API'}
 }
 
