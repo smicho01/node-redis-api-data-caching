@@ -4,7 +4,8 @@ import Redis from "ioredis";
 
 const redis = new Redis({
     'port': 6379,
-    'host': '127.0.0.1'
+    'host': '127.0.0.1',
+    'password': 'jshdf43t67_ywdh+g432i7fywhefugvytf&*'
 })
 const API_KEY = '67cdf2b79e9ca4fe79b9f0b145f59f1e'
 const cityEndpoint = (city) => `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
