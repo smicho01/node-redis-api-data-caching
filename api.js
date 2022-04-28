@@ -25,7 +25,7 @@ const getWeather = async (city) => {
     return {...apiResponse.data, 'source' : 'API'}
 }
 
-const city = 'London'
+const city = 'Bydgoszcz'
 const timeStart = new Date().getTime() // to calculate response time
 let weather = await getWeather(city)
 const timeEnd = new Date().getTime() // to calculate response time

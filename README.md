@@ -25,3 +25,7 @@ From the project root, run command `docker compose up -d`
 #### Evict all caches
 
 `flushdb`
+
+#### Check TTL of a cache key
+
+`TTL weather:London`
